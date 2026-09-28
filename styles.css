@@ -1,0 +1,196 @@
+/* Reset CSS (Best Practice) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #FDFBF7; /* Krem lembut seperti kertas komik fisik premium */
+    color: #1A1A1A;            /* Hitam arang (lebih soft dibanding hitam pekat) */
+}
+
+/* --- Styling Navigasi --- */
+header {
+    background-color: rgba(255, 255, 255, 0.9); /* Putih bersih transparan */
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #E0DCD3; /* Garis pembatas tipis sewarna kertas */
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 32px; font-weight: bold; color: #1A1A1A; }
+.logo span { color: #E63946; /* AKSEN: Merah Retro pada Logo */ }
+
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { color: #4A4A4A; text-decoration: none; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: #E63946; /* AKSEN: Merah saat menu disentuh */ }
+
+/* --- Styling Hero Section --- */
+.hero {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 80px 8%; min-height: 80vh;
+}
+
+.hero-text { flex: 1; }
+.greeting { color: #E63946; font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; }
+.hero-text h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 10px; color: #1A1A1A; }
+.highlight { color: #E63946; /* AKSEN: Judul penting jadi merah */ }
+.hero-text h2 { font-size: 1.8rem; color: #707070; margin-bottom: 20px; }
+.description { color: #4A4A4A; font-size: 1.1rem; line-height: 1.6; margin-bottom: 30px; max-width: 500px; }
+
+.btn {
+    display: inline-block; padding: 12px 30px; background-color: #E63946; /* AKSEN: Tombol Merah Retro */
+    color: #FFFFFF; text-decoration: none; font-weight: bold; border-radius: 8px; transition: 0.3s;
+}
+.btn:hover { background-color: #C12A36; transform: translateY(-3px); }
+
+.hero-image { flex: 1; display: flex; justify-content: flex-end; }
+.hero-image img {
+    width: 350px; height: 350px; border-radius: 50%; object-fit: cover;
+    border: 5px solid #FFFFFF; box-shadow: 0 10px 30px rgba(230, 57, 70, 0.12); /* Shadow merah tipis */
+}
+
+/* ========================================= */
+/* --- STYLING ABOUT SECTION --- */
+/* ========================================= */
+.about {
+    background-color: #F5F2EB; /* Warna kertas daur ulang yang sedikit lebih gelap */
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #1A1A1A;
+}
+
+.section-title span {
+    color: #E63946; /* AKSEN: Merah */
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-text, .about-skills {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3, .about-skills h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #1A1A1A;
+}
+
+.about-text p {
+    color: #4A4A4A;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Styling untuk kotak-kotak skill/genre komik */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-item {
+    background-color: #FFFFFF;
+    color: #E63946;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid #E63946;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.skill-item:hover {
+    background-color: #E63946;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+/* ========================================= */
+/* --- STYLING PROJECTS (GALERI) SECTION --- */
+/* ========================================= */
+.projects {
+    background-color: #FDFBF7; /* Kembali ke warna krem utama */
+    padding: 80px 8%;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Desain Kartu Komik */
+.project-card {
+    background-color: #FFFFFF; /* Kartu putih bersih agar komik H/P kontras */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04); /* Shadow sangat tipis */
+    border: 1px solid #E0DCD3; /* Border krem abu-abu tipis pembatas kertas */
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(230, 57, 70, 0.08); /* Efek shadow merah tipis saat hover */
+}
+
+.project-image img {
+    width: 100%;
+    height: 350px; /* Sesuai proporsi vertikal buku komik */
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: #1A1A1A;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #707070;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #E63946;
+    border: 1px solid #E63946;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-small:hover {
+    background-color: #E63946;
+    color: #FFFFFF;
+}
